@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "The stone",
+  "version": "1.0",
+
+  "description": "Take it to rule in your private hell.",
+
+  "icons": {
+    "48": "icons/greyball48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*","*://*.mozilla.org/*/"],
+      "js": ["main.js"]
+    }
+  ],
+  "background": {
+  	"scripts": ["backscript.js"]
+  },
+  "browser_action": {
+  "default_popup":"./popup/mainpopup.html",
+  "default_icon": {
+    "48": "icons/greyball48.png"
+  },
+  "default_title": "The stone"
+}
+
+}
