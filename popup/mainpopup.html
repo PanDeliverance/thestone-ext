@@ -1,1 +1,45 @@
-<h1>POPUP</h1>
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css"/>
+  </head>
+<body>
+
+<div id="popup-content">
+	<div id="header-container">
+	<h1>The stone popup</h1>
+	<img src="icons/greyball48.png">
+	</div>
+	<div>
+		<div class="button" id='new_rule'>New rule</div>
+		<div class="button" id='my_rules'>My rules</div>
+		<div class="button" id='account'>Account</div>
+		<div class="button" id='switch_off'>Disable here for now</div>
+		<div class="button" id='current_page'></div>
+	</div>
+	
+
+	<script type="text/javascript">
+		let new_rule=document.getElementById('new_rule');
+		new_rule.onClick((event) => {
+			event.target.innerHtml = "OHH NOOOO";
+			alert("wooow");
+		});
+
+		browser.tabs.executeScript("alert('Script!!')");
+
+		var current_page = document.getElementById('current_page').innerHtml = JSON.stringify(browser.tabs.Tab.url);
+	</script>
+
+
+</div>
+
+<div id="error-content" class="hidden">
+	<p>You can't rule here with the stone.</p>
+	<p>Try a different place.</p>
+</div>
+</body>
+</html>

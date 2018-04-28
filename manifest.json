@@ -24,6 +24,16 @@
     "48": "icons/greyball48.png"
   },
   "default_title": "The stone"
-}
+},
+  "web_accessible_resources": [
+    "icons/greyball48.png",
+
+  ],
+
+   "permissions": [
+    "activeTab",
+    "alarms",
+    "tabs"
+  ],
 
 }
